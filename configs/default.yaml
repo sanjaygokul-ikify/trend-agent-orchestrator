@@ -1,0 +1,20 @@
+agent:
+  name: agent-1
+  type: autonomous
+orchestrator:
+  host: localhost
+  port: 8000
+database:
+  url: postgresql://user:password@localhost:5432/database
+user_interface:
+  type: web
+security_module:
+  type: authentication
+monitoring_module:
+  type: metrics
+logging_module:
+  type: logs
+configuration_module:
+  type: config
+networking_module:
+  type: network
