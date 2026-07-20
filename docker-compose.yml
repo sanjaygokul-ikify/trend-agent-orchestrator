@@ -1,0 +1,16 @@
+version: '3'
+services:
+  agent-orchestrator:
+    build: .
+    ports:
+      - '8000:8000'
+    depends_on:
+      - database
+    environment:
+      - DATABASE_URL=postgresql://user:password@database:5432/database
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database
