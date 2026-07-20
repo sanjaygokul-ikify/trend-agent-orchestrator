@@ -22,6 +22,9 @@ class Executor:
         except InvalidResultError as e:
             logger.error(f"Error executing task: {e}")
             raise
+        except Exception as e:
+            logger.error(f"An unexpected error occurred: {e}")
+            raise
 
 
 logger = logging.getLogger(__name__)
